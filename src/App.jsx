@@ -19,13 +19,13 @@ function App() {
       <ImageSlider />
       <AboutUs />
       <OurCourses />
-      <LatestNews />
-      <PastEvents />
+      {/* <LatestNews /> */}
+      {/* <PastEvents /> */}
       <ChairmanMessage />
-      <OurInstructors />
-      <OurAlumni />
-      <SuccessStories />
-      <ContactUs />
+      {/* <OurInstructors /> */}
+      {/* <OurAlumni /> */}
+      {/* <SuccessStories /> */}
+      {/* <ContactUs /> */}
     </div>
   )
 }
