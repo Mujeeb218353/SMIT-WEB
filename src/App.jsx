@@ -10,6 +10,7 @@ import SuccessStories from './components/SuccessStories'
 import ContactUs from './components/ContactUs'
 import React, { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "./context/AppContext";
+import EducationChairmanMessage from './components/EducationChairmanMessage'
 
 function App() {
   const { theme, setTheme } = useContext(GlobalContext);
@@ -19,13 +20,14 @@ function App() {
       <ImageSlider />
       <AboutUs />
       <OurCourses />
-      {/* <LatestNews /> */}
-      {/* <PastEvents /> */}
+      <LatestNews />
+      <PastEvents />
       <ChairmanMessage />
-      {/* <OurInstructors /> */}
-      {/* <OurAlumni /> */}
+      <EducationChairmanMessage/>
+      <OurInstructors />
+      <OurAlumni />
       {/* <SuccessStories /> */}
-      {/* <ContactUs /> */}
+      <ContactUs />
     </div>
   )
 }

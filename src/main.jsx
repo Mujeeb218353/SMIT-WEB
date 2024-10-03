@@ -7,6 +7,8 @@ import App from "./App.jsx";
 import Loader from "./components/Loader.jsx";
 import AppContext from "./context/AppContext.jsx";
 import "./index.css";
+import ErrorBoundary from './components/ErrorBoundary.jsx';
+import NotFound from './components/NotFound.jsx';
 
 const UserLayout = lazy(() => import("./Layouts/UserLayout.jsx"));
 const AdminLayout = lazy(() => import("./Layouts/AdminLayout.jsx"));
@@ -35,7 +37,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <App />,
+        element: (
+
+          <App />
+        ),
       },
       {
         path: "about",
@@ -111,6 +116,10 @@ const router = createBrowserRouter([
           }
         ]
       },
+      {
+        path: "*",
+        element: <NotFound />,
+      },
     ],
   },
   {
@@ -127,7 +136,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AppContext>
+      <ErrorBoundary>
       <RouterProvider router={router} />
+      </ErrorBoundary>
     </AppContext>
   </StrictMode>
 );

@@ -19,7 +19,20 @@ const OurCourses = () => {
       alt: "Rounded avatar",
       buttonText: "View Details",
       link: "/courses/WMA",
-      technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind", "Firebase", "Typescript", "NextJs", "React Native", "Node.js", "MongoDB", "Express.js"],
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "Tailwind",
+        "Firebase",
+        "Typescript",
+        "NextJs",
+        "React Native",
+        "Node.js",
+        "MongoDB",
+        "Express.js",
+      ],
     },
     {
       id: 2,
@@ -29,7 +42,14 @@ const OurCourses = () => {
       alt: "Rounded avatar",
       buttonText: "View Details",
       link: "/courses/GD",
-      technologies: ["Adobe Photoshop", "Adobe Illustrator", "Adobe Indesign", "Adobe XD", "Figma", "Canva"],
+      technologies: [
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "Adobe Indesign",
+        "Adobe XD",
+        "Figma",
+        "Canva",
+      ],
     },
     {
       id: 3,
@@ -38,7 +58,15 @@ const OurCourses = () => {
       alt: "Rounded avatar",
       buttonText: "View Details",
       link: "/courses/PC",
-      technologies: ["Python", "Django", "Flask", "HTML", "CSS", "Bootstrap", "Tailwind"],
+      technologies: [
+        "Python",
+        "Django",
+        "Flask",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "Tailwind",
+      ],
     },
   ];
 
@@ -47,9 +75,14 @@ const OurCourses = () => {
       className="min-h-screen flex flex-col items-center justify-center py-10"
       id="ourCourses"
     >
-      <h1 className="text-4xl font-bold text-center" data-aos="zoom-in">Our Courses</h1>
-      <hr className="my-5 w-32 h-1 bg-[#8dc63f] border-none" data-aos="zoom-out"/>
-      <div className="grid grid-cols-1 gap-12 mt-4 w-full sm:mx-auto sm:h-[11/12] place-items-center  py-8">
+      <h1 className="text-4xl font-bold text-center" data-aos="zoom-in">
+        Our Courses
+      </h1>
+      <hr
+        className="my-5 w-32 h-1 bg-[#8dc63f] border-none"
+        data-aos="zoom-out"
+      />
+      <div className="flex gap-8 gap-y-8 flex-wrap justify-center">
         {courses.map((course, index) => (
           <CardDefault
             key={course.id}
@@ -64,7 +97,11 @@ const OurCourses = () => {
           />
         ))}
       </div>
-      <Link className="btn bg-[#8dc63f] hover:bg-[#8dc63f] text-white mt-12 shadow-xl hover:!scale-105" to={"/courses"} data-aos="zoom-out">
+      <Link
+        className="btn bg-[#8dc63f] hover:bg-[#8dc63f] text-white mt-12 shadow-xl hover:!scale-105"
+        to={"/courses"}
+        data-aos="zoom-out"
+      >
         Explore Courses
       </Link>
     </div>
@@ -73,34 +110,42 @@ const OurCourses = () => {
 
 export default OurCourses;
 
-const CardDefault = ({ id, imgSrc, alt, title, btnText, link, index, technologies }) => {
+const CardDefault = ({
+  id,
+  imgSrc,
+  alt,
+  title,
+  btnText,
+  link,
+  index,
+  technologies,
+}) => {
   const { theme } = useContext(GlobalContext);
 
   return (
-    <div 
-      className="w-full md:w-10/12 xl:w-8/12 2xl:w-7/12 min-h-96 rounded-2xl shadow-2xl flex flex-col sm:flex-row justify-center items-center transition ease-in-out delay-110 hover:!-translate-y-4 hover:rotate-2 hover:!scale-105 origin-center duration-300" 
+    <div
+      className="max-w-md flex flex-col items-center justify-between rounded-lg shadow-lg hover:!scale-105 duration-300 transition-shadow mt-4"
+      data-aos="zoom-in"
       key={id}
-      data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
     >
-      <figure className="sm:w-[40%] md:w-[50%] w-full p-4 sm:p-0 rounded-xl sm:rounded-l-xl sm:rounded-r-none">
-        <img
-          src={imgSrc}
-          alt={alt}
-          className="h-[25rem] w-full rounded-xl sm:rounded-l-xl sm:rounded-r-none object-cover object-center"
-        />
-      </figure>
-      <div className="w-full sm:w-[60%] md:w-[50%] px-4 py-8 flex flex-col gap-4">
-        <h2 className="text-2xl font-bold text-center sm:text-start">
-          {title}
-        </h2>
-        <div className="w-full py-4 text-center sm:text-start flex gap-4 flex-wrap justify-center sm:justify-start">
-          {
-           technologies.length > 0 ?
-            technologies.map((tech, index) => <span key={index} className="badge badge-outline">{tech}</span>)
-            : ""
-          }
-        </div>
-        <Link className="btn btn-neutral shadow-xl w-full sm:w-32" to={link}>
+      <Link to={link}>
+        <img className="rounded-t-lg aspect-[16/9]" src={imgSrc} alt={alt} />
+      </Link>
+      <div className="p-5 flex flex-col gap-2">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight">{title}</h5>
+        <p className="flex flex-wrap gap-2">
+          {technologies.map((tech, index) => (
+            <span key={index} className="badge badge-outline">
+              {tech}
+            </span>
+          ))}
+        </p>
+      </div>
+      <div className="w-full p-4 flex justify-center">
+        <Link
+          to={link}
+          className="btn bg-[#8dc63f] hover:bg-[#8dc63f] text-white mt-4 shadow-xl hover:!scale-105 "
+        >
           {btnText}
         </Link>
       </div>

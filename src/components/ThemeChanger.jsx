@@ -22,8 +22,8 @@ const ThemeChanger = ({position}) => {
   }, [setTheme]);
 
   return (
-    <div className={`${position} z-[99999]`}>
-      <div className="w-full" data-aos="zoom-in">
+    <div className={`${position} z-[99999]`} >
+      <div className="w-full">
         <label className={`swap swap-rotate btn btn-circle btn-neutral`}>
           <input
             type="checkbox"

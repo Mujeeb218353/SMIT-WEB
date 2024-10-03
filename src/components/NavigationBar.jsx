@@ -43,22 +43,22 @@ const NavigationBar = () => {
   const NavList = () => {
     
     return(
-    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1" >
+    <List className={`mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1 ${theme === "light" ? "": "text-white"}`} >
       <Typography as="a" href="#imageSlider" variant="small" className="font-medium">
-        <ListItem className="flex items-center gap-2 py-2 pr-4 w-full h-full text-black" as="span" >Home</ListItem>
+        <ListItem className={`flex items-center gap-2 py-2 pr-4 w-full h-full`} as="span">Home</ListItem>
       </Typography>
       <Typography as="a" href="#aboutUs" variant="small" className="font-medium">
-        <ListItem className="flex items-center gap-2 py-2 pr-4 w-full h-full text-black transition" as="span" >
+        <ListItem className="flex items-center gap-2 py-2 pr-4 w-full h-full transition" as="span" >
           About Us
         </ListItem>
       </Typography>
       <Typography as="a" href="#ourCourses" variant="small" className="font-medium">
-        <ListItem className="flex items-center gap-2 py-2 pr-4 w-full h-full text-black" as="span">
+        <ListItem className="flex items-center gap-2 py-2 pr-4 w-full h-full" as="span">
           Our Courses
         </ListItem>
       </Typography>
       <Typography as="a" href="#contactUs" variant="small" className="font-medium">
-        <ListItem className="flex items-center gap-2 py-2 pr-4 w-full h-full text-black" as="span">
+        <ListItem className="flex items-center gap-2 py-2 pr-4 w-full h-full" as="span">
           Contact Us
         </ListItem>
       </Typography>
@@ -67,8 +67,8 @@ const NavigationBar = () => {
       <Menu>
         <MenuHandler>
           <Typography as="div" variant="small" className="font-medium">
-            <ListItem className="flex items-center gap-2 py-2 pr-4 cursor-pointer text-black">
-              Quick Links <ChevronDownIcon className="h-4 w-4 text-black" />
+            <ListItem className="flex items-center gap-2 py-2 pr-4 cursor-pointer">
+              Quick Links <ChevronDownIcon className="h-4 w-4" />
             </ListItem>
           </Typography>
         </MenuHandler>
@@ -91,17 +91,15 @@ const NavigationBar = () => {
   )}
 
   return (
-    <div className="flex justify-center items-center w-full" >
+    <div className={`flex justify-center items-center w-full ${theme === "light" ? "": "bg-base-100"}`} data-theme={theme}>
       <Navbar
-        className="fixed top-0 lg:top-4 w-full  z-[1000] shadow-md border-none rounded-none lg:rounded-md"
-        // style={{ backdropFilter: "blur(10px)"}}
-        data-theme={theme}
+        className={`fixed top-0 w-full h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 z-[1000] ${theme === "light" ? "": "bg-base-100"} border-none`}
       >
         <div className="flex items-center justify-between w-full text-blue-gray-900">
           {/* Navigation fields in the center for larger screens */}
           <div className="hidden lg:block">
-            <div className="btn btn-ghost btn-circle avatar">
-              <Link to="/" className="w-16 rounded-full">
+            <div className="flex items-center">
+              <Link to="/" className="w-24 rounded-full">
                 <img alt="SMIT Logo" src={SMITLogo} />
               </Link>
             </div>
@@ -134,9 +132,9 @@ const NavigationBar = () => {
             </IconButton>
 
             {/* Centered logo for mobile */}
-            <div className="btn btn-ghost btn-circle avatar">
+            <div className="avatar">
               <Link to="/" className="w-16 rounded-full">
-                <img alt="SMIT Logo" src={SMITLogo} />
+                <img alt="SMIT Logo" src={SMITLogo} className="w-16" />
               </Link>
             </div>
 
