@@ -129,7 +129,16 @@ const router = createBrowserRouter([
         <AdminLayout />
       </Suspense>
     ),
-    children: [],
+    children: [
+      {
+        path: "*",
+        element: <NotFound />,
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 
