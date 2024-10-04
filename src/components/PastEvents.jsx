@@ -49,7 +49,7 @@ const PastEvents = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center py-10 px-6">
+    <div className="min-h-screen flex flex-col items-center justify-center py-10 px-4">
       <h1 className="text-4xl font-bold text-center" data-aos="zoom-in">
         Past Events
       </h1>
@@ -58,7 +58,7 @@ const PastEvents = () => {
         data-aos="zoom-out"
       />
       <div
-        className="flex flex-wrap justify-center gap-12"
+        className="flex flex-wrap justify-center gap-6 w-full"
         data-aos="zoom-in-down"
       >
         {videos.map((video, index) => (

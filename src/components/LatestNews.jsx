@@ -49,7 +49,7 @@ const LatestNews = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center py-10 px-8">
+    <div className="min-h-screen flex flex-col items-center justify-center py-10 px-4">
       <h1 className="text-4xl font-bold text-center" data-aos="zoom-in">
         Latest News
       </h1>
@@ -57,7 +57,7 @@ const LatestNews = () => {
         className="my-5 w-32 h-1 bg-[#8dc63f] border-none"
         data-aos="zoom-out"
       />
-      <div className="flex flex-wrap justify-center gap-12" data-aos="zoom-in-down">
+      <div className="flex flex-wrap justify-center gap-6 w-full" data-aos="zoom-in-down">
         {videos.map((video, index) => (
           <div
             key={video.id} // remove it at the time of integration
