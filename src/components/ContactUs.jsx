@@ -68,7 +68,7 @@ const ContactUs = () => {
             />
           </div>
           <button 
-            className={`${!Message || !Name || !Email ? "btn btn-wide btn-disabled" : "btn btn-wide bg-[#8dc63f] hover:bg-[#8dc63f] text-white shadow-xl hover:!scale-105 border-none"}`}
+            className={`${!Message || !Name || !Email ? "btn btn-wide btn-disabled shadow-lg" : "btn btn-wide bg-[#8dc63f] hover:bg-[#8dc63f] text-white shadow-xl hover:!scale-105 border-none shadow-lg"}`}
             disabled={send}
             onClick={handleSubmit}
           >
