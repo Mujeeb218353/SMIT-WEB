@@ -2,7 +2,7 @@ import React from 'react'
 
 const SuccessStories = () => {
   return (
-    <div>SuccessStories</div>
+    <div className='min-h-screen text-3xl flex justify-center items-center'>App is under development</div>
   )
 }
 

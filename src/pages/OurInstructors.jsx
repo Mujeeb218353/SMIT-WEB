@@ -2,7 +2,7 @@ import React from 'react'
 
 const OurInstructors = () => {
   return (
-    <div>OurInstructors</div>
+    <div className='min-h-screen text-3xl flex justify-center items-center'>App is under development</div>
   )
 }
 
