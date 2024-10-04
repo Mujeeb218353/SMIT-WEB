@@ -12,7 +12,7 @@ const ChairmanMessage = () => {
   return (
     <section 
       id="chairmanMessage"
-      className="min-h-screen flex flex-col items-center justify-center py-10"
+      className="min-h-screen flex flex-col items-center justify-center py-10 px-6"
     >
       <div className="w-full flex flex-col items-center">
       <h1 className="text-4xl font-bold text-center" data-aos="zoom-in">
@@ -32,7 +32,7 @@ const ChairmanMessage = () => {
           <img
             src={chairman.ChairmanPicture}
             alt="Chairman Picture"
-            className="h-80 w-auto rounded-xl shadow-2xl hover:!scale-105 duration-500 transition-transform ease-in-out"
+            className="h-72 w-auto rounded-xl shadow-2xl hover:!scale-105 duration-500 transition-transform ease-in-out"
           />
         </div>
         <div

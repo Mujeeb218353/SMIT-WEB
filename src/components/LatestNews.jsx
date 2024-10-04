@@ -49,7 +49,7 @@ const LatestNews = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center py-10 px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center py-10 px-6">
       <h1 className="text-4xl font-bold text-center" data-aos="zoom-in">
         Latest News
       </h1>

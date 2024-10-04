@@ -16,7 +16,7 @@ const OurAlumni = () => {
     { id: 3, name: 'Ghous Ahmed', image: 'https://smit-web-iota.vercel.app/Instructors3.jpeg' },
   ];
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center py-10 px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center py-10 px-6">
     <h1 className="text-4xl font-bold text-center" data-aos="zoom-in">Our Alumni</h1>
     <hr className="my-5 w-32 h-1 bg-[#8dc63f] border-none" data-aos="zoom-out"/>
     <div className='flex flex-col md:flex-row items-center justify-center gap-8 flex-wrap w-full'>

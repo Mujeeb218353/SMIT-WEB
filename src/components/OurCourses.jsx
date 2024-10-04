@@ -72,7 +72,7 @@ const OurCourses = () => {
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-center py-10"
+      className="min-h-screen flex flex-col items-center justify-center py-10 px-4"
       id="ourCourses"
     >
       <h1 className="text-4xl font-bold text-center" data-aos="zoom-in">
