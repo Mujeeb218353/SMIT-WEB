@@ -87,6 +87,7 @@ const NavigationBar = () => {
           ))}
         </MenuList>
       </Menu>
+      <ThemeChanger position={''}/>
     </List>
   )}
 
@@ -153,7 +154,6 @@ const NavigationBar = () => {
           </Button>
         </Collapse>
       </Navbar>
-      <ThemeChanger position={'fixed bottom-1 right-1 lg:bottom-4 lg:right-4'}/>
     </div>
   );
 };
