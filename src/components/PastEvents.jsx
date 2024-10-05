@@ -74,8 +74,8 @@ const PastEvents = () => {
               className="rounded-t-lg aspect-video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
-            <h3 className="text-xl font-semibold mt-4 px-4">{video.title}</h3>
-            <p className="text-gray-600 mt-2 max-w-xs overflow-hidden px-4 mb-4">
+            <h3 className="text-xl font-semibold mt-4 px-4 text-center">{video.title}</h3>
+            <p className="mt-2 overflow-hidden px-4 mb-4 text-center w-full">
               {video.description}
             </p>
           </div>
@@ -86,7 +86,7 @@ const PastEvents = () => {
         to={"/pastEvents"}
         data-aos="zoom-out"
       >
-        Explore More
+        Explore Events
       </Link>
     </div>
   );

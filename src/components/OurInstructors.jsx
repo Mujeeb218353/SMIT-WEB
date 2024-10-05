@@ -29,7 +29,7 @@ const OurInstructors = () => {
         to={"/ourInstructors"}
         data-aos="zoom-out"
       >
-        Explore More
+        All Instructors
       </Link>
     </div>
   );

@@ -132,8 +132,8 @@ const CardDefault = ({
         <img className="rounded-t-lg aspect-[16/9]" src={imgSrc} alt={alt} />
       </Link>
       <div className="p-5 flex flex-col gap-2">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight">{title}</h5>
-        <p className="flex flex-wrap gap-2">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-center">{title}</h5>
+        <p className="flex flex-wrap gap-2 justify-center">
           {technologies.map((tech, index) => (
             <span key={index} className="badge badge-outline">
               {tech}

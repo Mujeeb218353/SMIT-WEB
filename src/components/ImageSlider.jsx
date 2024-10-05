@@ -63,7 +63,7 @@ const ImageSlider = () => {
                 <Typography
                   variant="lead"
                   color="white"
-                  className="mb-12 opacity-80"
+                  className="mb-12 opacity-80 text-center"
                 >
                   {image.description}
                 </Typography>

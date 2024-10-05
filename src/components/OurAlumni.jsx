@@ -29,7 +29,7 @@ const OurAlumni = () => {
       to={"/ourAlumni"}
       data-aos="zoom-out"
     >
-      Explore More
+      All Alumni
     </Link>
   </div>
   )
